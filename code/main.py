@@ -13,7 +13,7 @@ class Game:
 
         # health and score setup
         self.lives = 3
-        self.livesSurface = pygame.image.load('graphics/player.png').convert_alpha()
+        self.livesSurface = pygame.image.load('.../graphics/player.png').convert_alpha()
         self.livesXStartPos = screenWidth - (self.livesSurface.get_size()[0] * 2 + 20)
         self.score = 0
         self.font = pygame.font.Font('font/Pixeled.ttf', 20)
@@ -37,12 +37,12 @@ class Game:
         self.extraSpawnTime = randint(40, 80)
 
         # Audio 
-        music = pygame.mixer.Sound('audio/music.wav')
+        music = pygame.mixer.Sound('.../audio/music.wav')
         music.set_volume(0.2)
         music.play(loops=-1)
-        self.laserSound = pygame.mixer.Sound('audio/laser.wav')
+        self.laserSound = pygame.mixer.Sound('.../audio/laser.wav')
         self.laserSound.set_volume(0.5)
-        self.explosionSound = pygame.mixer.Sound('audio/explosion.wav')
+        self.explosionSound = pygame.mixer.Sound('.../audio/explosion.wav')
         self.explosionSound.set_volume(0.3)
 
     def createObstacle(self, xStart, yStart, offset_x):
@@ -183,7 +183,7 @@ class Game:
 
 class CRT:
     def __init__(self):
-        self.tv = pygame.image.load('graphics/tv.png').convert_alpha()
+        self.tv = pygame.image.load('.../graphics/tv.png').convert_alpha()
         self.tv = pygame.transform.scale(self.tv, (screenWidth,screenHeight))
     
     def createCRTLines(self):
